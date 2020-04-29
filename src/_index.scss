@@ -1,0 +1,16 @@
+@import "@carbon/themes/scss/themes";
+
+// $carbon--theme--v10: map-merge(
+//   $carbon--theme--v9,
+//   (
+//     hover-ui: #3d70b2,
+//     hover-primary-text: white,
+//   )
+// );
+
+$carbon--theme: $carbon--theme--v9;
+
+$feature-flags: (
+  ui-shell: true,
+);
+@import "carbon-components/scss/globals/scss/styles.scss";

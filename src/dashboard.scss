@@ -1,0 +1,170 @@
+.bx--grid {
+  margin: 0;
+  padding: 10px;
+}
+
+#ibm-name {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #5a6872;
+}
+
+#app-name {
+  margin-left: 4px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#sub-name {
+  margin-left: 12px;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  color: #565656;
+}
+
+#dash-name {
+  margin-left: 8px;
+  margin-top: 8px;
+  font-size: 24px;
+}
+
+/* Tile */
+.bx--tile {
+  padding: 24px;
+  margin-bottom: 10px;
+}
+
+.bx--tile-min {
+  min-height: 140px;
+}
+
+#container-info-tile {
+  min-height: 200px;
+}
+
+.tile-row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tile-header {
+  margin-bottom: 24px;
+}
+
+.tile-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.tile-title {
+  padding-left: 14px;
+  font-size: 24px;
+  /* font-weight: 600; */
+}
+
+.data-display-row {
+  margin-bottom: 8px;
+}
+
+.tile-attr-title {
+  margin-left: 50px;
+  /* font-weight: 600; */
+  display: inline-block;
+  min-width: 10em;
+}
+
+.tile-attr-val {
+  margin-left: 8px;
+  color: #393939;
+}
+
+.tile-attr-p-title {
+  display: inline-block;
+  min-width: 10em;
+}
+
+.data-row-p-val {
+  margin-top: 12px;
+  color: #5a6872;
+}
+
+.bolded {
+  font-weight: 600;
+}
+
+/* Utility */
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.margin-bot-md {
+  margin-bottom: 32px;
+}
+
+.button-icon {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+  fill: white;
+  /* fill: #3d70b2; */
+}
+
+.secondary-button-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.display-icon {
+  margin-right: 6px;
+}
+
+.display-btn {
+  margin-left: 6px;
+}
+
+/* #btn-zosmf {
+  margin-left: 72px;
+  margin-right: 72px;
+} */
+
+.btn-divider {
+  margin-left: 42px;
+  margin-right: 42px;
+  font-size: 16px;
+  color: #393939;
+  vertical-align: middle;
+}
+
+#btn-row {
+  margin-top: 0px;
+}
+
+.divider {
+  border: 1px solid #565656;
+  margin-bottom: 8px;
+}
+
+.data-row-div {
+  margin-top: 24px;
+}
+
+#zbox {
+  width: 54px;
+  height: 60px;
+  float: right;
+}
+
+.display-value {
+  white-space: pre-line;
+}
