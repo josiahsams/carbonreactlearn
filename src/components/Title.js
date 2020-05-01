@@ -1,9 +1,17 @@
 import React from "react";
 
 import { Button, Tile } from "carbon-components-react";
-import { Terminal16, Document16 } from "@carbon/icons-react";
+// import { Terminal16, Document16 } from "@carbon/icons-react";
+
+import { TerminalIcon, DocumentIcon, AppServiceIcon } from "./CustomIcons";
 
 function Title(props) {
+  let skeletonClass;
+  if (props.details.isLoading) {
+    skeletonClass = "bx--skeleton";
+  } else {
+    skeletonClass = "";
+  }
   return (
     <Tile>
       <span id="ibm-name">IBM Cloud </span>
@@ -13,28 +21,32 @@ function Title(props) {
 
       <div className="center" id="btn-row">
         <Button
+          className={skeletonClass}
           size="field"
           kind="ghost"
           href={props.consoleurl}
-          renderIcon={Terminal16}
+          renderIcon={TerminalIcon}
         >
           Master Console
         </Button>
+
         <span className="btn-divider">/ </span>
         <Button
+          className={skeletonClass}
           size="field"
           kind="ghost"
           href={props.zosmf}
-          renderIcon={Document16}
+          renderIcon={AppServiceIcon}
         >
           z/OSMF{" "}
         </Button>
         <span className="btn-divider">/ </span>
         <Button
+          className={skeletonClass}
           size="field"
           kind="ghost"
           href={props.syslogs}
-          renderIcon={Document16}
+          renderIcon={DocumentIcon}
         >
           System Logs{" "}
         </Button>

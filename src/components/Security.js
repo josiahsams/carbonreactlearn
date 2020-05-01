@@ -1,7 +1,9 @@
 import React from "react";
 import { Tile, ModalWrapper } from "carbon-components-react";
 
-import { ContainerSoftware24, View16 } from "@carbon/icons-react";
+// import { ContainerSoftware24, View16 } from "@carbon/icons-react";
+import { View16 } from "@carbon/icons-react";
+import { SecurityIcon } from "./CustomIcons";
 
 function Security(props) {
   return (
@@ -9,7 +11,7 @@ function Security(props) {
       <div className="bx-row">
         <div className="bx--col-sm-4">
           <div className="tile-header">
-            <ContainerSoftware24 />
+            <SecurityIcon className="tile-icon" />
             <span className="tile-title">Security</span>
           </div>
         </div>
@@ -22,6 +24,8 @@ function Security(props) {
             </div>
             <div className="bx--col-sm-1">
               <ModalWrapper
+                modalAriaLabel="ssh"
+                aria-label="ssh"
                 passiveModal
                 size="sm"
                 hasScrollingContent
@@ -50,6 +54,8 @@ function Security(props) {
             </div>
             <div className="bx--col-sm-1">
               <ModalWrapper
+                aria-label="cert"
+                modalAriaLabel="cert"
                 passiveModal
                 size="sm"
                 hasScrollingContent

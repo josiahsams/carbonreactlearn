@@ -1,7 +1,8 @@
 import React from "react";
 import { Tile } from "carbon-components-react";
 
-import { ContainerSoftware24 } from "@carbon/icons-react";
+// import { ContainerSoftware24 } from "@carbon/icons-react";
+import { NetworkIcon } from "./CustomIcons";
 
 function Network(props) {
   return (
@@ -9,7 +10,7 @@ function Network(props) {
       <div>
         <div className="bx--col-sm-12">
           <div className="tile-header">
-            <ContainerSoftware24 />
+            <NetworkIcon className="tile-icon" />
             <span className="tile-title">Network</span>
           </div>
           <div>

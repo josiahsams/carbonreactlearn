@@ -45,3 +45,17 @@
 .bx--col-sm-2 {
   padding: 0 10px;
 }
+
+.bx--snippet--multi {
+  padding: 1rem 0 0;
+  margin: 10px 0 0 0px;
+  border-left: #3d70b2;
+  border-style: none none none solid;
+  .bx--snippet-container {
+    pre {
+      margin-left: 10px;
+      overflow-x: hidden;
+      white-space: pre-wrap;
+    }
+  }
+}
