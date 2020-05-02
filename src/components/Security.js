@@ -1,9 +1,14 @@
 import React from "react";
 import { Tile, ModalWrapper } from "carbon-components-react";
-
-// import { ContainerSoftware24, View16 } from "@carbon/icons-react";
 import { View16 } from "@carbon/icons-react";
 import { SecurityIcon } from "./CustomIcons";
+
+function trimSSH(sshkey) {
+  return sshkey.substring(8, 28) + " ...";
+}
+function trimCert(cert) {
+  return cert.substring(28, 48) + " ...";
+}
 
 function Security(props) {
   return (
@@ -16,11 +21,15 @@ function Security(props) {
           </div>
         </div>
       </div>
+
       <div className="bx-row">
         <div className="bx--col-sm-4">
           <div className="bx--row">
             <div className="bx--col-sm-3">
-              <div className="tile-attr-title">SSH Public Key:</div>
+              <span className="tile-attr-title">SSH Public Key:</span>
+              <span className="tile-attr-val bolded" id="ssh-pubkey-short">
+                {trimSSH(props.details.sshPublickey)}
+              </span>
             </div>
             <div className="bx--col-sm-1">
               <ModalWrapper
@@ -38,19 +47,19 @@ function Security(props) {
               >
                 {" "}
                 <p>
-                  <span className="display-value" id="ssh-pubkey"></span>
+                  <span className="display-value" id="ssh-pubkey">
+                    {props.details.sshPublickey}
+                  </span>
                 </p>{" "}
               </ModalWrapper>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="bx-row">
-        <div className="bx--col-sm-4">
           <div className="bx--row">
             <div className="bx--col-sm-3">
               <span className="tile-attr-title">X.509 Certificate:</span>
+              <span className="tile-attr-val bolded" id="ssh-certi-short">
+                {trimCert(props.details.x509Certificate)}
+              </span>
             </div>
             <div className="bx--col-sm-1">
               <ModalWrapper
@@ -63,12 +72,14 @@ function Security(props) {
                 triggerButtonIconDescription="ssh keys"
                 triggerButtonKind="ghost"
                 renderTriggerButtonIcon={View16}
-                modalHeading="SSH Public Key"
+                modalHeading="X.509 Certificate"
                 modalLabel="Label"
               >
                 {" "}
                 <p>
-                  <span className="display-value" id="ssh-pubkey"></span>
+                  <span className="display-value" id="ssh-pubkey">
+                    {props.details.x509Certificate}
+                  </span>
                 </p>{" "}
               </ModalWrapper>
             </div>

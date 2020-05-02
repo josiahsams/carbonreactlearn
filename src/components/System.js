@@ -1,7 +1,5 @@
 import React from "react";
 import { Tile } from "carbon-components-react";
-
-// import { ContainerSoftware24 } from "@carbon/icons-react";
 import { InfraIcon } from "./CustomIcons";
 
 function PrintDetails(props) {
@@ -16,7 +14,7 @@ function PrintDetails(props) {
       <div className="data-row-div"></div>
       <div className="data-display-row">
         <span className="tile-attr-title">Memory:</span>
-        <span className="tile-attr-val" id="id">
+        <span className="tile-attr-val bolded" id="id">
           {props.details.memory}
         </span>
       </div>

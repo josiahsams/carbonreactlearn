@@ -1,7 +1,5 @@
 import React from "react";
 import { Tile } from "carbon-components-react";
-
-// import { ContainerSoftware24 } from "@carbon/icons-react";
 import { NetworkIcon } from "./CustomIcons";
 
 function Network(props) {
@@ -17,14 +15,14 @@ function Network(props) {
             <div className="data-display-row">
               <span className="tile-attr-title">Public IP:</span>
               <span className="tile-attr-val bolded" id="created">
-                {props.details.publicip}
+                {props.details.network.public_ip}
               </span>
             </div>
             <div className="data-row-div"></div>
             <div className="data-display-row">
               <span className="tile-attr-title">Private IP:</span>
               <span className="tile-attr-val bolded" id="id">
-                {props.details.privateip}
+                {props.details.network.private_ip}
               </span>
             </div>
           </div>

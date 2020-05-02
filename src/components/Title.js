@@ -1,17 +1,23 @@
 import React from "react";
-
 import { Button, Tile } from "carbon-components-react";
-// import { Terminal16, Document16 } from "@carbon/icons-react";
+import { syslogUrl } from "../const";
 
 import { TerminalIcon, DocumentIcon, AppServiceIcon } from "./CustomIcons";
 
 function Title(props) {
+  var consoleurl;
+  var zosmf;
+  var syslogs;
   let skeletonClass;
-  if (props.details.isLoading) {
+  if (props.isLoading) {
     skeletonClass = "bx--skeleton";
   } else {
     skeletonClass = "";
+    consoleurl = "https://" + props.details.network.public_ip + ":2424/master";
+    zosmf = "https://" + props.details.network.public_ip + ":10443/zosmf";
+    syslogs = syslogUrl + "/log/" + props.details.hostname;
   }
+
   return (
     <Tile>
       <span id="ibm-name">IBM Cloud </span>
@@ -24,7 +30,7 @@ function Title(props) {
           className={skeletonClass}
           size="field"
           kind="ghost"
-          href={props.consoleurl}
+          href={consoleurl}
           renderIcon={TerminalIcon}
         >
           Master Console
@@ -35,7 +41,7 @@ function Title(props) {
           className={skeletonClass}
           size="field"
           kind="ghost"
-          href={props.zosmf}
+          href={zosmf}
           renderIcon={AppServiceIcon}
         >
           z/OSMF{" "}
@@ -45,7 +51,7 @@ function Title(props) {
           className={skeletonClass}
           size="field"
           kind="ghost"
-          href={props.syslogs}
+          href={syslogs}
           renderIcon={DocumentIcon}
         >
           System Logs{" "}

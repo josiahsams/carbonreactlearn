@@ -38,7 +38,7 @@ function Admin(props) {
                 the following command:
               </span>
               <CodeSnippet type="multi" onClick={copyFn} id="codeholder">
-                {`ssh ibmuser@${props.details.publicip} 'tsocmd "ALTUSER IBMUSER PASSWORD(<new-password>) NOEXPIRE RESUME"'"`}
+                {`ssh ibmuser@${props.details.network.public_ip} 'tsocmd "ALTUSER IBMUSER PASSWORD(<new-password>) NOEXPIRE RESUME"'"`}
               </CodeSnippet>
             </div>
           </div>
