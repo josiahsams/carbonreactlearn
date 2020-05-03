@@ -7,7 +7,6 @@ import Network from "./Network";
 import Security from "./Security";
 import Admin from "./Admin";
 import ErrorPage from "./ErrorPage";
-import { brokerEndpointUrl } from "../const";
 
 function PrintSection(props) {
   if (!props.isLoading) {

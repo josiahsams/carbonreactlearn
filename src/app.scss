@@ -19,9 +19,9 @@
   }
 }
 
-.bx--modal-container {
-  border-top: #3d70b2 4px solid;
-}
+// .bx--modal-container {
+//   border-top: #3d70b2 4px solid;
+// }
 
 .bx--tile {
   @extend .bx--tile;
@@ -49,8 +49,9 @@
 .bx--snippet--multi {
   padding: 1rem 0 0;
   margin: 10px 0 0 0px;
-  border-left: #3d70b2;
-  border-style: none none none solid;
+  border-color: #d1f1db;
+  border-style: solid;
+  border-width: thin;
   .bx--snippet-container {
     pre {
       margin-left: 10px;

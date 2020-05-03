@@ -37,7 +37,6 @@ function Security(props) {
                 aria-label="ssh"
                 passiveModal
                 size="sm"
-                hasScrollingContent
                 buttonTriggerClassName="tile-view-button"
                 triggerButtonIconDescription="ssh keys"
                 triggerButtonKind="ghost"
@@ -67,7 +66,6 @@ function Security(props) {
                 modalAriaLabel="cert"
                 passiveModal
                 size="sm"
-                hasScrollingContent
                 buttonTriggerClassName="tile-view-button"
                 triggerButtonIconDescription="ssh keys"
                 triggerButtonKind="ghost"
